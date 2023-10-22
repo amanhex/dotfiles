@@ -1,0 +1,21 @@
+#!/bin/sh
+while read -r file
+do
+    case "$1" in
+        "w")
+            if [ -f ~/.config/waybar/style.css ]; then
+                THEMEIS=$(readlink -f ~/.config/waybar/style.css | cut -d '-' -f2)
+                bgaction=~/.config/hypr/scripts/bgaction
+                if [ "$THEMEIS" == "dark.css" ]; then
+                    awk -i inplace -v new_command="   swww img ~/.config/hypr/backgrounds/$file" 'NR==11 {$0=new_command} 1' $bgaction
+                    swww img ~/.config/hypr/backgrounds/$file --transition-fps 60 --transition-type wipe --transition-duration 2
+                    ~/.local/bin/pywal
+                else
+                    awk -i inplace -v new_command="   swww img ~/.config/hypr/backgrounds/$file" 'NR==13 {$0=new_command} 1' $bgaction
+                    swww img ~/.config/hypr/backgrounds/$file --transition-fps 60 --transition-type wipe --transition-duration 2
+                    ~/.local/bin/pywal
+                fi
+            fi
+            ;;
+    esac
+done
