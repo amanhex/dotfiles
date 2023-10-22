@@ -1,2 +1,23 @@
 # dotfiles
-dotfiles for linux build
+
+Dotfiles for linux build
+
+
+## Usage
+
+First install hyprland using SolDoesTech's [HyprV2](https://github.com/SolDoesTech/HyprV2) script, then install the stuffs used in this build and customize it using the configs provived.
+## Stuffs Used
+
+- Tiling Window Manager : [Hyprland](https://hyprland.org/)
+- Bar : [Waybar](https://github.com/Alexays/Waybar)
+- Image Viewer: [sxiv](https://github.com/xyb3rt/sxiv)
+- Terminal : [Foot](https://codeberg.org/dnkl/foot)
+- Shell : [zsh](https://www.zsh.org/) (ohmyzsh)
+
+## Screenshots
+
+![image1](https://raw.githubusercontent.com/amanhex/dotfiles/hyprland/images/image1.png)
+
+![image2](https://raw.githubusercontent.com/amanhex/dotfiles/hyprland/images/image2.png)
+
+![image3](https://raw.githubusercontent.com/amanhex/dotfiles/hyprland/images/image3.png)
