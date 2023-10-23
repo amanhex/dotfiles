@@ -8,7 +8,7 @@ THEMEIS=$(readlink -f ~/.config/waybar/style.css | cut -d '-' -f2)
 
 #show the correct wallpapper based on the theme
 if [ $THEMEIS == "dark.css" ]; then
-   swww img ~/.config/hypr/backgrounds/wallpapername
+   swww img ~/.config/hypr/backgrounds/wallhaven-d6vxoo.jpg
 else
-   swww img ~/.config/hypr/backgrounds/wallpappername
+   swww img ~/.config/hypr/backgrounds/wallhaven-p9grm9.jpg
 fi
