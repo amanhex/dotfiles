@@ -5,7 +5,7 @@ Dotfiles for linux build
 
 ## Usage
 
-First install hyprland using SolDoesTech's [HyprV2](https://github.com/SolDoesTech/HyprV2) script, then install the stuffs used in this build and customize it using the configs provived.
+First install hyprland using SolDoesTech's [HyprV2](https://github.com/SolDoesTech/HyprV2) script, then install the stuffs used in this build and customize it using the configs provided.
 
 ## Stuffs Used
 
