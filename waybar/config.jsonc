@@ -51,7 +51,8 @@
     },
 
     "hyprland/window": {
-        "format": "{}"
+        "format": "{}",
+        "max-length": 30
     },
 
     "custom/light_dark": {
