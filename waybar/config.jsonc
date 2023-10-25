@@ -11,7 +11,8 @@
     "modules-left": [
         "hyprland/workspaces",
         "cpu",
-        "memory"
+        "memory",
+        "hyprland/window"
     ],
 
     "modules-center": [
@@ -47,6 +48,10 @@
             "9": [],
             "10": []
         }
+    },
+
+    "hyprland/window": {
+        "format": "{}"
     },
 
     "custom/light_dark": {

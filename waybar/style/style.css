@@ -101,6 +101,7 @@ button {
 #mode,
 #cpu,
 #memory,
+#window,
 #custom-network_traffic,
 #custom-notification,
 #custom-light_dark,
@@ -131,7 +132,7 @@ label:focus {
     background-color: @base;
 }
 
-#clock, #custom-network_traffic {
+#clock, #custom-network_traffic, #window {
   color: @text;
 }
 
