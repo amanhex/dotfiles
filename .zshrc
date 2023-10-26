@@ -104,6 +104,7 @@ export PATH=$PATH:~/.local/bin/
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias autoremove='yay -Yc'
 alias removecache='sudo paccache -rk3'
+alias lf='lfrun'
 alias ua-drop-caches='sudo paccache -rk3; yay -Sc --aur --noconfirm'
 alias ua-update-all='export TMPFILE="$(mktemp)"; \
     sudo true; \
