@@ -14,10 +14,10 @@ First install hyprland using SolDoesTech's [HyprV2](https://github.com/SolDoesTe
 - Image Viewer: [sxiv](https://github.com/xyb3rt/sxiv)
 - Terminal : [Foot](https://codeberg.org/dnkl/foot) (Install libsixel for image viewing in terminal (works only for Foot terminal))
 - Text Editor : [Neovim](https://neovim.io/) (Also install [NvChad](https://nvchad.com/) for conf to work)
-- Shell : [zsh](https://www.zsh.org/) (ohmyzsh)
 - File Manager: [Thunar](https://docs.xfce.org/xfce/thunar/start)
 - Terminal File Manager: [lf-sixel](https://github.com/horriblename/lfimg-sixel) (Install it as given in repo's README)
 - Pdf Viewer: [Zathura](https://pwmt.org/projects/zathura/) (Install extras with it to work ex- pdf-poppler)
+- Shell : [zsh](https://www.zsh.org/) (ohmyzsh)
 
 Install pywal for terminal theming
 
