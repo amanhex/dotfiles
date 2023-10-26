@@ -22,6 +22,6 @@ while true; do
   fi
 
   # Sleep for a while before checking again (you can adjust this time interval)
-  sleep 60
+  sleep 30
 done
 
