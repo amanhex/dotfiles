@@ -9,14 +9,14 @@
     "spacing": 5,
     // Choose the order of the modules
     "modules-left": [
-        "hyprland/workspaces",
         "cpu",
         "memory",
+        "clock",
         "hyprland/window"
     ],
 
     "modules-center": [
-        "clock"
+        "hyprland/workspaces"
     ],
 
     "modules-right": [
@@ -41,12 +41,12 @@
             "2": [],
             "3": [],
             "4": [],
-            "5": [],
-            "6": [],
-            "7": [],
-            "8": [],
-            "9": [],
-            "10": []
+            "5": []
+            // "6": [],
+            // "7": [],
+            // "8": [],
+            // "9": [],
+            // "10": []
         }
     },
 
@@ -71,7 +71,7 @@
         "interval": 10,
         "format": " {usage}%",
         "max-length": 10,
-        "on-click": "foot -e btop --utf-force"
+        "on-click": "foot -e vtop"
     },
 
     "memory": {
@@ -80,7 +80,7 @@
         "max-length": 10,
         "tooltip": true,
         "tooltip-format": "Memory - {used:0.1f}GB used",
-        "on-click": "foot -e btop --utf-force"
+        "on-click": "foot -e vtop"
     },
 
     "custom/notification": {
