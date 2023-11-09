@@ -114,6 +114,7 @@ alias ua-update-all='export TMPFILE="$(mktemp)"; \
       && ua-drop-caches \
       && yay -Syyu --noconfirm'
 alias btop='btop --utf-force'
+alias umnt='jmtpfs ~/mnt'
 
 
 ~/.local/bin/pywal
