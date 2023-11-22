@@ -17,5 +17,15 @@ do
                 fi
             fi
             ;;
+
+    "d")
+            # Check if the file exists before deleting
+            if [ -f "$file" ]; then
+                rm "$file"
+                echo "File $file deleted."
+            else
+                echo "File $file does not exist."
+            fi
+            ;;
     esac
 done
