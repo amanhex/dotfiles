@@ -9,14 +9,13 @@
     "spacing": 5,
     // Choose the order of the modules
     "modules-left": [
+        "hyprland/workspaces",
         "cpu",
-        "memory",
-        "clock",
-        "hyprland/window"
+        "memory"
     ],
 
     "modules-center": [
-        "hyprland/workspaces"
+        "clock"
     ],
 
     "modules-right": [
@@ -130,11 +129,10 @@
     },
 
    "clock": {
-        "format": "{:%I:%M %p}",
-        "tooltip": true,
-        "tooltip-format": "{: %A, %B %e %Y}"
-    },
- 
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": " {:%H:%M    %a, %b %d}"
+    }, 
+
     "disk": {
         "interval": 300,
         "format": "󰋊 {free}",
