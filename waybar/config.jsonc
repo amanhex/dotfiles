@@ -11,7 +11,8 @@
     "modules-left": [
         "hyprland/workspaces",
         "cpu",
-        "memory"
+        "memory",
+        "hyprland/window"
     ],
 
     "modules-center": [
@@ -21,7 +22,7 @@
     "modules-right": [
         "custom/network_traffic",
         "custom/updates",
-        "disk",
+        // "disk",
         "pulseaudio",
         "pulseaudio#microphone",
         "tray",
@@ -34,19 +35,7 @@
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
-        "on-click": "activate",
-        "persistent_workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "5": []
-            // "6": [],
-            // "7": [],
-            // "8": [],
-            // "9": [],
-            // "10": []
-        }
+        "on-click": "activate"
     },
 
     "hyprland/window": {
@@ -106,13 +95,21 @@
     "battery": {
         "states": {
             "good": 95,
-            "warning": 20
+            "warning": 30
         },
         "format": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
-        "format-alt": "{time} {icon}",
-        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+        "format-charging": " {capacity}%",
+        "format-plugged": "󰂄 {capacity}%",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
     },
 
     "tray": {
@@ -179,19 +176,7 @@
     "custom/power": {
         "format": "󰤆",
         "on-click": "sh -c '(sleep 0.5s; wlogout --protocol layer-shell)' & disown"
-    },
-
-    "custom/media": {
-        "format": "{icon} {}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     }
+
 }
 // vim: ft=jsonc
