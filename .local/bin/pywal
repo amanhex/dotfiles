@@ -6,4 +6,4 @@ else
     wallpaper=$(awk '/swww img/ {count++} count == 2 {gsub("swww img ", ""); sub(".*/", "", $0); print; exit}' ~/.config/hypr/scripts/bgaction)
 fi
 
-wal -q -t -i ~/.config/hypr/backgrounds/$wallpaper --saturate 0.7
+wal -q -t -b "#000000" -i ~/.config/hypr/backgrounds/$wallpaper --saturate 0.7
