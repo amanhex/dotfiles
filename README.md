@@ -23,7 +23,7 @@ Install pywal for terminal theming
 
 ## Screenshots & Demo
 
-[Demo]()
+https://github.com/amanhex/dotfiles/assets/80842658/bc5c01c3-cfbb-49dc-987d-50571f684c69
 
 ![image1](https://raw.githubusercontent.com/amanhex/dotfiles/hyprland/images/image1.png)
 
