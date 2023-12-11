@@ -1,12 +1,12 @@
-@define-color base   #f5f5f5;
-@define-color mantle #ececec;
-@define-color crust  #ffffff;
+@define-color base   #000000;
+@define-color mantle #000000;
+@define-color crust  #0F0404;
 
-@define-color text     #333333;
-@define-color subtext0 #666666;
+@define-color text     #ffffff;
+@define-color subtext0 #ffffff;
 @define-color subtext1 #999999;
 
-@define-color surface0 #e0e0e0;
+@define-color surface0 #313244;
 @define-color surface1 #d4d4d4;
 @define-color surface2 #c7c7c7;
 
@@ -30,7 +30,7 @@
 @define-color rosewater #ffcccc;
 
 * {
-    font-family: JetBrainsMono NF;
+    font-family: JetBrainsMono Nerd Font;
     font-size: 13px;
 }
 

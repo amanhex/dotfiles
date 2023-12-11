@@ -56,19 +56,19 @@
     },
  
     "cpu": {
-        "interval": 10,
+        "interval": 2,
         "format": " {usage}%",
         "max-length": 10,
-        "on-click": "foot -e vtop"
+        "on-click": "foot -e btop --utf-force"
     },
 
     "memory": {
-        "interval": 30,
+        "interval": 5,
         "format": " {}%",
         "max-length": 10,
         "tooltip": true,
         "tooltip-format": "Memory - {used:0.1f}GB used",
-        "on-click": "foot -e vtop"
+        "on-click": "foot -e btop --utf-force"
     },
 
     "custom/notification": {
@@ -111,6 +111,7 @@
             ""
         ]
     },
+
 
     "tray": {
         "icon-size": 18,

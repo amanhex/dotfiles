@@ -23,11 +23,11 @@ ln -sf ~/.config/wofi/style/style$SWITCHTO.css ~/.config/wofi/style.css
 
 #set the xfce theme
 xfconf-query -c xsettings -p /Net/ThemeName -s "Adwaita$SWITCHTO"
-xfconf-query -c xsettings -p /Net/IconThemeName -s "Adwaita$SWITCHTO"
+xfconf-query -c xsettings -p /Net/IconThemeName -s "Qogir$SWITCHTO"
 
 #set the GTK theme
 gsettings set org.gnome.desktop.interface gtk-theme "Adwaita$SWITCHTO"
-gsettings set org.gnome.desktop.interface icon-theme "Adwaita$SWITCHTO"
+gsettings set org.gnome.desktop.interface icon-theme "Qogir$SWITCHTO"
 
 #change the background image and be cool about it ;)
 swww img ~/.config/hypr/backgrounds/$wallpaper --transition-fps 60 --transition-type wipe --transition-duration 2
