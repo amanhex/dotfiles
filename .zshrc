@@ -74,12 +74,11 @@ plugins=(git zsh-autosuggestions zsh-completions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
-pfetch
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
 export PATH=$PATH:~/.local/bin/
+export PATH=$PATH:/usr/lib/jvm/default/bin
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -116,5 +115,6 @@ alias ua-update-all='export TMPFILE="$(mktemp)"; \
 alias btop='btop --utf-force'
 alias umnt='jmtpfs ~/mnt'
 
+neofetch
 
 ~/.local/bin/pywal
