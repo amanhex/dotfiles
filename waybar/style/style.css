@@ -94,6 +94,7 @@ button {
 #cpu,
 #memory,
 #disk,
+#backlight,
 #temperature,
 #backlight,
 #network,
@@ -176,7 +177,7 @@ label:focus {
   color: @blue;
 }
 
-#cpu, #memory, #custom-notification, #custom-light_dark {
+#cpu, #memory, #custom-notification, #backlight, #custom-light_dark {
   color: @blue;
 }
 
