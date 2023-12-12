@@ -1,0 +1,9 @@
+THEMEIS=$(readlink -f ~/.config/waybar/style.css | cut -d '-' -f2)
+
+if [ "$THEMEIS" == "dark.css" ]; then
+    wallpaper=$(awk '/swww img/ {count++} count == 1 {gsub("swww img ", ""); sub(".*/", "", $0); print; exit}' ~/.config/hypr/scripts/bgaction)
+else
+    wallpaper=$(awk '/swww img/ {count++} count == 2 {gsub("swww img ", ""); sub(".*/", "", $0); print; exit}' ~/.config/hypr/scripts/bgaction)
+fi
+
+wal -q -t -b "#000000" -i ~/.config/hypr/backgrounds/$wallpaper --saturate 0.7
