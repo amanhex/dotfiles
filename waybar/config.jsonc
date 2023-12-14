@@ -20,7 +20,7 @@
     ],
 
     "modules-right": [
-        "custom/network_traffic",
+        "network",
         "custom/updates",
         // "disk",
         "backlight",
@@ -48,12 +48,6 @@
         "format": "󰐾",
         "on-click": "~/.config/waybar/scripts/baraction light",
         "tooltip": false
-    },
-
-    "custom/network_traffic": {
-      "exec": "~/.config/waybar/scripts/network_traffic.sh",
-      "return-type": "json",
-      "format-ethernet": "{icon} {ifname} ⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}"
     },
  
     "cpu": {
@@ -147,10 +141,17 @@
     },
 
     "network": {
-        "tooltip": false,
-        "format-wifi": "󰖩 {essid}",
-        "format-disconnected": "睊",
-        "format-ethernet": ""
+      "interface": "wlo1",
+      "format": "{ifname}",
+      "format-wifi": "{icon} ⇣{bandwidthDownBits} ⇡{bandwidthUpBits}",
+      "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+      "format-disconnected": "", //An empty format will hide the module.
+      "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+      "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+      "tooltip-format-ethernet": "{ifname} ",
+      "tooltip-format-disconnected": "Disconnected",
+      "max-length": 20,
+      "interval": 2
     },
 
     "pulseaudio": {

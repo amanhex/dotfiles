@@ -107,7 +107,6 @@ button {
 #cpu,
 #memory,
 #window,
-#custom-network_traffic,
 #custom-notification,
 #custom-light_dark,
 #idle_inhibitor,
@@ -136,7 +135,7 @@ label:focus {
     background-color: @base;
 }
 
-#clock, #custom-network_traffic, #window {
+#clock, #network, #window {
   color: @text;
 }
 
