@@ -30,3 +30,5 @@ https://github.com/amanhex/dotfiles/assets/80842658/bc5c01c3-cfbb-49dc-987d-5057
 ![image1](https://raw.githubusercontent.com/amanhex/dotfiles/975bcd0dc52be95597dcafc8fb369569a39d7197/img-vids/image1.png)
 
 ![image2](https://raw.githubusercontent.com/amanhex/dotfiles/hyprland/img-vids/image2.png)
+
+![image3](https://raw.githubusercontent.com/amanhex/dotfiles/hyprland/img-vids/image3.png)
