@@ -11,7 +11,7 @@ First install hyprland using SolDoesTech's [HyprV2](https://github.com/SolDoesTe
 
 - Tiling Window Manager : [Hyprland](https://hyprland.org/)
 - Bar : [Waybar](https://github.com/Alexays/Waybar)
-- Image Viewer: [sxiv](https://github.com/xyb3rt/sxiv)
+- Image Viewer: [imv](https://github.com/eXeC64/imv)
 - Terminal : [Foot](https://codeberg.org/dnkl/foot) (Install libsixel for image viewing in terminal (works only for Foot terminal))
 - Text Editor : [Neovim](https://neovim.io/) (Also install [NvChad](https://nvchad.com/) for conf to work)
 - File Manager: [Thunar](https://docs.xfce.org/xfce/thunar/start)
