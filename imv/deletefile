@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Check if an argument (filename) is provided
+if [ "$#" -eq 1 ]; then
+    imv_current_file="$1"
+
+    # Extract filename
+    filename=$(basename -- "$imv_current_file")
+
+    # Check if the file exists
+    if [ -f "$imv_current_file" ]; then
+        rm $filename
+        echo "File $filename deleted"
+    else
+        echo "File $filename does not exists"
+    fi 
+fi
