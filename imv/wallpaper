@@ -1,34 +1,23 @@
 #!/bin/bash
 
-# Check if an argument (filename) is provided
-if [ "$#" -eq 1 ]; then
-    imv_current_file="$1"
+# Get the provided filename
+imv_current_file="$1"
 
-    # Extract filename
-    filename=$(basename -- "$imv_current_file")
+# Extract filename
+filename=$(basename -- "$imv_current_file")
 
-    # Check if the file exists
-    if [ -f "$imv_current_file" ]; then
-        # Check your theme or background setting logic here based on the filename
-        if [ -f ~/.config/waybar/style.css ]; then
-            THEMEIS=$(readlink -f ~/.config/waybar/style.css | cut -d '-' -f2)
-            bgaction=~/.config/hypr/scripts/bgaction
-            if [ "$THEMEIS" == "dark.css" ]; then
-                awk -i inplace -v new_command="   swww img ~/.config/hypr/backgrounds/$filename" 'NR==11 {$0=new_command} 1' $bgaction
-                swww img ~/.config/hypr/backgrounds/$filename --transition-fps 60 --transition-type wipe --transition-duration 2
-                ~/.local/bin/pywal
-            else
-                awk -i inplace -v new_command="   swww img ~/.config/hypr/backgrounds/$filename" 'NR==13 {$0=new_command} 1' $bgaction
-                swww img ~/.config/hypr/backgrounds/$filename --transition-fps 60 --transition-type wipe --transition-duration 2
-                ~/.local/bin/pywal
-            fi
-        else
-            echo "style.css not found in ~/.config/waybar/"
-        fi
-    else
-        echo "File '$imv_current_file' does not exist."
-    fi
+# Check theme based on stylesheet
+THEMEIS=$(readlink -f ~/.config/waybar/style.css | cut -d '-' -f2)
+
+# Update correct line in bgaction file based on theme
+if [ "$THEMEIS" == "dark.css" ]; then
+    sed -i "0,/swww img/{s/swww img.*/swww img ~\/.config\/hypr\/backgrounds\/$filename/}" ~/.config/hypr/scripts/bgaction
 else
-    echo "No file provided or incorrect argument count."
+    sed -i "0,/swww img/!{s/swww img.*/swww img ~\/.config\/hypr\/backgrounds\/$filename/}" ~/.config/hypr/scripts/bgaction
 fi
 
+# Set wallpaper with transition effects
+swww img ~/.config/hypr/backgrounds/$filename --transition-fps 60 --transition-type wipe --transition-duration 2
+
+# Optionally call pywal (comment out if not needed or causing issues)
+~/.local/bin/pywal

@@ -14,7 +14,7 @@ suppress_default_binds = true
 [binds]
 # Define some key bindings
 q = quit
-<Ctrl+w> = exec ~/.config/imv/wallpaper "$imv_current_file"
+<Shift+W> = exec ~/.config/imv/wallpaper "$imv_current_file"
 <Ctrl+d> = exec ~/.config/imv/deletefile "$imv_current_file"
 
 # Image navigation
