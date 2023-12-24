@@ -9,6 +9,9 @@ filename=$(basename -- "$imv_current_file")
 # Check theme based on stylesheet
 THEMEIS=$(readlink -f ~/.config/waybar/style.css | cut -d '-' -f2)
 
+# Set wallpaper with transition effects
+swww img ~/.config/hypr/backgrounds/$filename --transition-fps 40 --transition-type wipe --transition-duration 2
+
 # Update correct line in bgaction file based on theme
 if [ "$THEMEIS" == "dark.css" ]; then
     sed -i "0,/swww img/{s/swww img.*/swww img ~\/.config\/hypr\/backgrounds\/$filename/}" ~/.config/hypr/scripts/bgaction
@@ -16,8 +19,7 @@ else
     sed -i "0,/swww img/!{s/swww img.*/swww img ~\/.config\/hypr\/backgrounds\/$filename/}" ~/.config/hypr/scripts/bgaction
 fi
 
-# Set wallpaper with transition effects
-swww img ~/.config/hypr/backgrounds/$filename --transition-fps 60 --transition-type wipe --transition-duration 2
-
 # Optionally call pywal (comment out if not needed or causing issues)
 ~/.local/bin/pywal
+
+exit 0

@@ -1,3 +1,5 @@
+#!/bin/sh
+
 THEMEIS=$(readlink -f ~/.config/waybar/style.css | cut -d '-' -f2)
 
 if [ "$THEMEIS" == "dark.css" ]; then
