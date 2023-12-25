@@ -10,9 +10,9 @@ window {
     margin: 4px;
     padding-left: 20px;
     border: none;
-    color: #cdd6f4;
+    color: #1e1e2e;
     font-weight: bold;
-    background-color: #1e1e2e;
+    background-color: #e7e7ec;
    	outline: none;
     border-radius: 15px;
     margin: 10px;
@@ -25,10 +25,10 @@ window {
 
 #inner-box {
     margin: 4px;
-    border: 10px solid #1e1e2e;
-    color: #cdd6f4;
+    border: 10px solid #e7e7ec;
+    color: #1e1e2e;
     font-weight: bold;
-    background-color: #1e1e2e;
+    background-color: #e7e7ec;
     border-radius: 15px;
 }
 
@@ -36,7 +36,7 @@ window {
     margin: 0px;
     border: none;
     border-radius: 15px;
-    background-color: #1e1e2e;
+    background-color: #e7e7ec;
 }
 
 #scroll {
@@ -53,7 +53,7 @@ window {
 }
 
 #text:selected {
-    color: #cdd6f4;
+    color: #1e1e2e;
     margin: 0px 0px;
     border: none;
     border-radius: 15px;
