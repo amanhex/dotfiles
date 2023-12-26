@@ -28,3 +28,4 @@ https://github.com/amanhex/dotfiles/assets/80842658/bc5c01c3-cfbb-49dc-987d-5057
 - Check out the youtube video: [Link](https://youtu.be/t6KG91n9MXY)
 
 ![image1](https://github.com/amanhex/dotfiles/blob/hyprland/img-vids/image.png?raw=true)
+![image2](https://raw.githubusercontent.com/amanhex/dotfiles/hyprland/img-vids/image-2.png)
