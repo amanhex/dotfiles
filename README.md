@@ -21,9 +21,7 @@ First install hyprland using SolDoesTech's [HyprV2](https://github.com/SolDoesTe
 
 Install pywal for terminal theming
 
-## Screenshots & Demo
-
-https://github.com/amanhex/dotfiles/assets/80842658/bc5c01c3-cfbb-49dc-987d-50571f684c69
+## Screenshots
 
 - Check out the youtube video: [Link](https://youtu.be/t6KG91n9MXY)
 
