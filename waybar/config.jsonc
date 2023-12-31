@@ -9,21 +9,21 @@
     "spacing": 5,
     // Choose the order of the modules
     "modules-left": [
-        "hyprland/workspaces",
         "cpu",
         "memory",
+        "clock",
         "hyprland/window"
     ],
 
     "modules-center": [
-        "clock"
+        "hyprland/workspaces"
     ],
 
     "modules-right": [
         "network",
         "custom/updates",
         // "disk",
-        "backlight",
+        // "backlight",
         "pulseaudio",
         "pulseaudio#microphone",
         "tray",
@@ -36,7 +36,14 @@
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
-        "on-click": "activate"
+        "on-click": "activate",
+        "persistent_workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+        }
     },
 
     "hyprland/window": {
@@ -93,18 +100,10 @@
             "warning": 30
         },
         "format": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-alt": "{time} {icon}",
         "format-plugged": "󰂄 {capacity}%",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
 
     "backlight": {
@@ -130,8 +129,8 @@
     },
 
    "clock": {
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": " {:%H:%M    %a, %b %d}"
+        "tooltip-format": "<big>{:%a, %b %d}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": " {:%H:%M}"
     }, 
 
     "disk": {
@@ -143,7 +142,7 @@
     "network": {
       "interface": "wlo1",
       "format": "{ifname}",
-      "format-wifi": "{icon} ⇣{bandwidthDownBits} ⇡{bandwidthUpBits}",
+      "format-wifi": "{icon} ⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
       "format-ethernet": "{ipaddr}/{cidr} 󰊗",
       "format-disconnected": "", //An empty format will hide the module.
       "tooltip-format": "{ifname} via {gwaddr} 󰊗",
