@@ -9,6 +9,7 @@
     "spacing": 5,
     // Choose the order of the modules
     "modules-left": [
+        "custom/logo",
         "cpu",
         "memory",
         "clock",
@@ -55,6 +56,12 @@
         "format": "󰐾",
         "on-click": "~/.config/waybar/scripts/baraction light",
         "tooltip": false
+    },
+
+    "custom/logo": {
+        "type": "custom/text",
+        "format": "  ",
+        "on-click": "foot -e -H neofetch"
     },
  
     "cpu": {
