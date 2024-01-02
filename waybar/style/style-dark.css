@@ -89,6 +89,7 @@ button {
 #temperature,
 #backlight,
 #network,
+#bluetooth,
 #pulseaudio,
 #wireplumber,
 #custom-power,
@@ -103,7 +104,7 @@ button {
 #idle_inhibitor,
 #scratchpad,
 #mpd {
-    padding: 0 12px;
+    padding: 0 10px;
     background-color: @base;
     color: @crust;
     border-radius: 15px;
@@ -126,7 +127,7 @@ label:focus {
     background-color: @base;
 }
 
-#clock, #network, #window {
+#clock, #network, #bluetooth, #window {
   color: @text;
 }
 

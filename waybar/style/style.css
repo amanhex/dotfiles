@@ -116,6 +116,7 @@ button {
 #custom-power,
 #custom-updates,
 #tray,
+#bluetooth,
 #mode,
 #cpu,
 #memory,
@@ -150,7 +151,7 @@ label:focus {
     background-color: #000000;
 }
 
-#clock, #network, #window {
+#clock, #network, #bluetooth, #window {
   color: @text;
 }
 

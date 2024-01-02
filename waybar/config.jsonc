@@ -1,6 +1,6 @@
 {
     "layer": "top",
-    "position": "top",
+    "position": "bottom",
     "mod": "dock",
     "exclusive": true,
     "passthrough": false,
@@ -26,8 +26,9 @@
         // "disk",
         // "backlight",
         "pulseaudio",
-        "pulseaudio#microphone",
-        "tray",
+        // "pulseaudio#microphone",
+        // "tray",
+        "bluetooth",
         "battery",
         "custom/notification",
         "custom/light_dark",
@@ -113,6 +114,17 @@
         "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
 
+    "bluetooth": {
+        "format": "",
+        "format-disabled": "󰂳",
+        "format-connected": "󰂱 {num_connections}",
+        "tooltip-format": " {device_alias}",
+        "tooltip-format-connected": "{device_enumerate}",
+        "tooltip-format-enumerate-connected": " {device_alias} 󰂄 {device_battery_percentage}%",
+        "tooltip": true,
+        "on-click": "blueman-manager"
+    },
+
     "backlight": {
         // "device": "acpi_video1",
         "format": "{percent}% {icon}",
@@ -149,15 +161,16 @@
     "network": {
       "interface": "wlan0",
       "format": "{ifname}",
-      "format-wifi": "{icon} ⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
+      "tooltip-format-wifi": "{icon} ⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
       "format-ethernet": "{ipaddr}/{cidr} 󰊗",
-      "format-disconnected": "󱚼", //An empty format will hide the module.
+      "format-disconnected": "", //An empty format will hide the module.
       "tooltip-format": "{ifname} via {gwaddr} 󰊗",
-      "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+      "format-wifi": "{essid} ({signalStrength}%) ",
       "tooltip-format-ethernet": "{ifname} ",
       "tooltip-format-disconnected": "Disconnected",
       "max-length": 20,
-      "interval": 2
+      "interval": 2,
+      "on-click": "foot -F sh -c 'nmtui'"
     },
 
     "pulseaudio": {
