@@ -163,14 +163,14 @@
       "format": "{ifname}",
       "tooltip-format-wifi": "{icon} ⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
       "format-ethernet": "{ipaddr}/{cidr} 󰊗",
-      "format-disconnected": "", //An empty format will hide the module.
+      "format-disconnected": "󰖪", //An empty format will hide the module.
       "tooltip-format": "{ifname} via {gwaddr} 󰊗",
       "format-wifi": "{essid} ({signalStrength}%) ",
       "tooltip-format-ethernet": "{ifname} ",
       "tooltip-format-disconnected": "Disconnected",
       "max-length": 20,
       "interval": 2,
-      "on-click": "foot -F sh -c 'nmtui'"
+      "on-click": "foot -F sh -c 'sleep 2 && nmtui'"
     },
 
     "pulseaudio": {
