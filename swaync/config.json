@@ -2,17 +2,13 @@
     "$schema": "/etc/xdg/swaync/configSchema.json",
     "positionX": "right",
     "positionY": "top",
-    "control-center-margin-top": 10,
-    "control-center-margin-bottom": 10,
-    "control-center-margin-right": 10,
-    "control-center-margin-left": 10,
     "notification-icon-size": 64,
     "notification-body-image-height": 100,
     "notification-body-image-width": 200,
     "timeout": 10,
     "timeout-low": 5,
     "timeout-critical": 0,
-    "fit-to-screen": false,
+    "fit-to-screen": true,
     "control-center-width": 500,
     "control-center-height": 1030,
     "notification-window-width": 500,
@@ -23,10 +19,6 @@
     "hide-on-action": true,
     "script-fail-notify": true,
     "widgets": [
-        "buttons-grid",
-        "mpris",
-        "volume",
-        "backlight",
         "title",
         "dnd",
         "notifications"
@@ -43,56 +35,6 @@
         "label": {
             "max-lines": 1,
             "text": "Notification Center"
-        },
-        "mpris": {
-            "image-size": 96,
-            "image-radius": 12
-        },
-        "volume": {
-            "label": "󰕾 "
-        },
-        "backlight": {
-            "label": "󰃟 "
-        },
-        "buttons-grid": {
-            "actions": [
-                {
-                    "label": "󰐥",
-                    "command": "systemctl poweroff"
-                },
-                {
-                    "label": "󰜉",
-                    "command": "systemctl reboot"
-                },
-                {
-                    "label": "󰌾",
-                    "command": "swaylock"
-                },
-                {
-                    "label": "󰍃",
-                    "command": "swaymsg exit"
-                },
-                {
-                    "label": "󰏥",
-                    "command": "systemctl suspend"
-                },
-                {
-                    "label": "󰕾",
-                    "command": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
-                },
-                {
-                    "label": "󰍬",
-                    "command": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
-                },
-                {
-                    "label": "󰖩",
-                    "command": "iwgtk"
-                },
-                {
-                    "label": "󰂯",
-                    "command": "blueman-manager"
-                }
-            ]
         }
     }
 }

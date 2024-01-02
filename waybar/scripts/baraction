@@ -21,6 +21,10 @@ ln -sf ~/.config/waybar/style/style$SWITCHTO.css ~/.config/waybar/style.css
 #set the wofi theme
 ln -sf ~/.config/wofi/style/style$SWITCHTO.css ~/.config/wofi/style.css
 
+#set the swaync theme
+ln -sf ~/.config/swaync/style/style$SWITCHTO.css ~/.config/swaync/style.css
+swaync-client -rs
+
 #set the xfce theme
 xfconf-query -c xsettings -p /Net/ThemeName -s "Adwaita$SWITCHTO"
 xfconf-query -c xsettings -p /Net/IconThemeName -s "Qogir$SWITCHTO"
