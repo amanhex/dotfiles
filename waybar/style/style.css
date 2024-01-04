@@ -188,6 +188,11 @@ label:focus {
     color: @crust;
 }
 
+#memory.warning {
+  background-color: @red;
+  color: @crust;
+}
+
 #custom-power {
   color: @mauve;
 }
