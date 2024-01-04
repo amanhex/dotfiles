@@ -1,90 +1,93 @@
 {
-    "layer": "top",
-    "position": "bottom",
-    "mod": "dock",
-    "exclusive": true,
-    "passthrough": false,
-    "gtk-layer-shell": true,
-    "height": 35,
-    "spacing": 5,
-    // Choose the order of the modules
-    "modules-left": [
-        "custom/logo",
-        "cpu",
-        "memory",
-        "clock",
-        "hyprland/window"
-    ],
+  "layer": "top",
+  "position": "bottom",
+  "mod": "dock",
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+  "height": 35,
+  "spacing": 5,
+  // Choose the order of the modules
+  "modules-left": [
+    "custom/logo",
+    "cpu",
+    "memory",
+    "clock",
+    "hyprland/window"
+  ],
 
-    "modules-center": [
-        "hyprland/workspaces"
-    ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
 
-    "modules-right": [
-        "network",
-        "custom/updates",
-        // "disk",
-        // "backlight",
-        "pulseaudio",
-        // "pulseaudio#microphone",
-        // "tray",
-        "bluetooth",
-        "battery",
-        "custom/notification",
-        "custom/light_dark",
-        "custom/power"
-    ],
+  "modules-right": [
+    "network",
+    "custom/updates",
+    // "disk",
+    // "backlight",
+    "pulseaudio",
+    // "pulseaudio#microphone",
+    // "tray",
+    "bluetooth",
+    "battery",
+    "custom/notification",
+    "custom/light_dark",
+    "custom/power"
+  ],
 
-    "hyprland/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": true,
-        "on-click": "activate",
-        "persistent_workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "5": []
-        }
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "on-click": "activate",
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    }
+  },
+
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 30
+  },
+
+  "custom/light_dark": {
+    "format": "󰐾",
+    "on-click": "~/.config/waybar/scripts/baraction light",
+    "tooltip": false
+  },
+
+  "custom/logo": {
+    "type": "custom/text",
+    "format": "  ",
+    "on-click": "foot -e -H neofetch"
+  },
+
+  "cpu": {
+    "interval": 2,
+    "format": " {usage}%",
+    "max-length": 10,
+    "on-click": "foot -e btop --utf-force"
+  },
+
+  "memory": {
+    "states": {
+      "warning": 80
     },
+    "interval": 5,
+    "format": " {}%",
+    "max-length": 10,
+    "tooltip": true,
+    "tooltip-format": "Memory - {used:0.1f}GB used",
+    "on-click": "foot -e btop --utf-force"
+  },
 
-    "hyprland/window": {
-        "format": "{}",
-        "max-length": 30
-    },
-
-    "custom/light_dark": {
-        "format": "󰐾",
-        "on-click": "~/.config/waybar/scripts/baraction light",
-        "tooltip": false
-    },
-
-    "custom/logo": {
-        "type": "custom/text",
-        "format": "  ",
-        "on-click": "foot -e -H neofetch"
-    },
- 
-    "cpu": {
-        "interval": 2,
-        "format": " {usage}%",
-        "max-length": 10,
-        "on-click": "foot -e btop --utf-force"
-    },
-
-    "memory": {
-        "interval": 5,
-        "format": " {}%",
-        "max-length": 10,
-        "tooltip": true,
-        "tooltip-format": "Memory - {used:0.1f}GB used",
-        "on-click": "foot -e btop --utf-force"
-    },
-
-    "custom/notification": {
-      "tooltip": false,
-      "format": "{icon}",
-      "format-icons": {
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
       "notification": "<span foreground='red'><sup></sup></span>",
       "none": "",
       "dnd-notification": "<span foreground='red'><sup></sup></span>",
@@ -94,141 +97,139 @@
       "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
       "dnd-inhibited-none": ""
     },
-      "return-type": "json",
-      "exec-if": "which swaync-client",
-      "exec": "swaync-client -swb",
-      // "on-click": "swaync-client -t -sw",
-      "on-click-right": "swaync-client -d -sw",
-      "escape": true
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    // "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30
     },
+    "format": "{icon}  {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-plugged": "󰂄 {capacity}%",
+    "format-icons": ["", "", "", "", ""]
+  },
 
-    "battery": {
-        "states": {
-            "good": 95,
-            "warning": 30
-        },
-        "format": "{icon}  {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-alt": "{time} {icon}",
-        "format-plugged": "󰂄 {capacity}%",
-        "format-icons": ["", "", "", "", ""]    
+  "bluetooth": {
+    "format": "",
+    "format-disabled": "󰂳",
+    "format-connected": "󰂱 {num_connections}",
+    "tooltip-format": " {device_alias}",
+    "tooltip-format-connected": "{device_enumerate}",
+    "tooltip-format-enumerate-connected": " {device_alias} 󰂄 {device_battery_percentage}%",
+    "tooltip": true,
+    "on-click": "blueman-manager"
+  },
+
+  "backlight": {
+    // "device": "acpi_video1",
+    "format": "{percent}% {icon}",
+    "format-icons": ["", "", "", "", "", "", "", "", ""],
+    "on-scroll-up": "brightnessctl set 2%+",
+    "on-scroll-down": "brightnessctl set 2%-"
+  },
+
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10
+  },
+
+  "custom/updates": {
+    "format": "󰏔 {}",
+    "exec": "~/.config/waybar/scripts/update-sys",
+    "on-click": "~/.config/waybar/scripts/update-sys update",
+    "interval": 300,
+    "tooltip": true
+  },
+
+  "clock": {
+    "format": "{:%H:%M}  ",
+    // "format-alt": "{:%A, %B %d, %Y (%R)}  ",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 2,
+      // "weeks-pos"     : "right",
+      "on-scroll": 1,
+      "on-click-right": "mode",
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
     },
-
-    "bluetooth": {
-        "format": "",
-        "format-disabled": "󰂳",
-        "format-connected": "󰂱 {num_connections}",
-        "tooltip-format": " {device_alias}",
-        "tooltip-format-connected": "{device_enumerate}",
-        "tooltip-format-enumerate-connected": " {device_alias} 󰂄 {device_battery_percentage}%",
-        "tooltip": true,
-        "on-click": "blueman-manager"
-    },
-
-    "backlight": {
-        // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", ""],
-        "on-scroll-up": "brightnessctl set 2%+",
-        "on-scroll-down": "brightnessctl set 2%-"
-    },
-
-
-    "tray": {
-        "icon-size": 18,
-        "spacing": 10
-    },
-
-    "custom/updates": {
-        "format": "󰏔 {}",
-        "exec": "~/.config/waybar/scripts/update-sys",
-        "on-click": "~/.config/waybar/scripts/update-sys update",
-        "interval": 300,
-        "tooltip": true
-    }, 
-
-    "clock": {
-        "format": "{:%H:%M}  ",
-        // "format-alt": "{:%A, %B %d, %Y (%R)}  ",
-        "tooltip-format": "<tt><small>{calendar}</small></tt>",
-        "calendar": {
-                    "mode"          : "year",
-                    "mode-mon-col"  : 2,
-                    // "weeks-pos"     : "right",
-                    "on-scroll"     : 1,
-                    "on-click-right": "mode",
-                    "format": {
-                              "months":     "<span color='#ffead3'><b>{}</b></span>",
-                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
-                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
-                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
-                              }
-                    },
-        "actions":  {
-                    "on-click-right": "mode",
-                    "on-click-forward": "tz_up",
-                    "on-click-backward": "tz_down",
-                    "on-scroll-up": "shift_up",
-                    "on-scroll-down": "shift_down"
-                    }
-    },
-
-    "disk": {
-        "interval": 300,
-        "format": "󰋊 {free}",
-        "path": "/"
-    },
-
-    "network": {
-      "interface": "wlan0",
-      "format": "{ifname}",
-      "tooltip-format-wifi": "{icon} ⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
-      "format-ethernet": "{ipaddr}/{cidr} 󰊗",
-      "format-disconnected": "󰖪", //An empty format will hide the module.
-      "tooltip-format": "{ifname} via {gwaddr} 󰊗",
-      "format-wifi": "{essid} ({signalStrength}%) ",
-      "tooltip-format-ethernet": "{ifname} ",
-      "tooltip-format-disconnected": "Disconnected",
-      "max-length": 20,
-      "interval": 2,
-      "on-click": "foot -F sh -c 'sleep 2 && nmtui'"
-    },
-
-    "pulseaudio": {
-        "format": "{icon} {volume}%",
-        "format-muted": "",
-        "on-click": "pamixer -t",
-        "on-click-right": "pavucontrol",
-        "on-scroll-up": "pamixer -i 5",
-        "on-scroll-down": "pamixer -d 5",
-        "scroll-step": 5,
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        }
-    },
-
-    "pulseaudio#microphone": {
-        "format": "{format_source}",
-        "format-source": " {volume}%",
-        "format-source-muted": "",
-        "on-click": "pamixer --default-source -t",
-        "on-click-right": "pavucontrol",
-        "on-scroll-up": "pamixer --default-source -i 5",
-        "on-scroll-down": "pamixer --default-source -d 5",
-        "scroll-step": 5
-    },
-
-    "custom/power": {
-        "format": "󰤆",
-        "on-click": "sh -c '(sleep 0.5s; wlogout --protocol layer-shell)' & disown"
+    "actions": {
+      "on-click-right": "mode",
+      "on-click-forward": "tz_up",
+      "on-click-backward": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
     }
+  },
 
+  "disk": {
+    "interval": 300,
+    "format": "󰋊 {free}",
+    "path": "/"
+  },
+
+  "network": {
+    "interface": "wlan0",
+    "format": "{ifname}",
+    "tooltip-format-wifi": "{icon} ⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
+    "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+    "format-disconnected": "󰖪", //An empty format will hide the module.
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 20,
+    "interval": 2,
+    "on-click": "foot -F sh -c 'sleep 2 && nmtui'"
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "",
+    "on-click": "pamixer -t",
+    "on-click-right": "pavucontrol",
+    "on-scroll-up": "pamixer -i 5",
+    "on-scroll-down": "pamixer -d 5",
+    "scroll-step": 5,
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    }
+  },
+
+  "pulseaudio#microphone": {
+    "format": "{format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": "",
+    "on-click": "pamixer --default-source -t",
+    "on-click-right": "pavucontrol",
+    "on-scroll-up": "pamixer --default-source -i 5",
+    "on-scroll-down": "pamixer --default-source -d 5",
+    "scroll-step": 5
+  },
+
+  "custom/power": {
+    "format": "󰤆",
+    "on-click": "sh -c '(sleep 0.5s; wlogout --protocol layer-shell)' & disown"
+  }
 }
 // vim: ft=jsonc

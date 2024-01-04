@@ -14,7 +14,7 @@
 @define-color overlay1 #a6a6a6;
 @define-color overlay2 #999999;
 
-@define-color red       #ff3333;
+@define-color red       #C21807;
 
 * {
     font-family: JetBrainsMono Nerd Font;
@@ -162,6 +162,11 @@ label:focus {
 #battery.warning:not(.charging) {
     background-color: @red;
     color: @crust;
+}
+
+#memory.warning {
+  background-color: @red;
+  color: @crust;
 }
 
 #custom-power {
