@@ -39,6 +39,7 @@ window#waybar {
     color: @text;
     transition-property: background-color;
     transition-duration: .5s;
+    opacity: 0.8;
 }
 
 window#waybar.hidden {
@@ -183,9 +184,21 @@ label:focus {
     color: @green;
 }
 
+@keyframes blink {
+    to {
+        background-color: #000000;
+        color: #000000;
+    }
+}
+
 #battery.warning:not(.charging) {
     background-color: @red;
     color: @crust;
+    animation-name: blink;
+    animation-duration: 1.0s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 #memory.warning {

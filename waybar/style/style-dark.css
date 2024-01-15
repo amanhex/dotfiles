@@ -17,28 +17,29 @@
 @define-color red       #C21807;
 
 * {
-    font-family: JetBrainsMono Nerd Font;
-    font-size: 13px;
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 13px;
 }
 
 window#waybar {
-    background-color: @crust;
-    color: @text;
-    transition-property: background-color;
-    transition-duration: .5s;
+  background-color: @crust;
+  color: @text;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  opacity: 0.8;
 }
 
 window#waybar.hidden {
-    opacity: 0.2;
+  opacity: 0.2;
 }
 
 window#waybar.termite {
-    background-color: @base;
+  background-color: @base;
 }
 
 window#waybar.chromium {
-    background-color: @base;
-    border: none;
+  background-color: @base;
+  border: none;
 }
 
 #waybar.empty #window {
@@ -46,38 +47,38 @@ window#waybar.chromium {
 }
 
 button {
-    box-shadow: inset 0 -3px transparent;
-    border: none;
-    border-radius: 0;
+  box-shadow: inset 0 -3px transparent;
+  border: none;
+  border-radius: 0;
 }
 
 #workspaces button:hover {
-    background: @surface0;
-    border: @surface0;
+  background: @surface0;
+  border: @surface0;
 }
 
 #workspaces button {
-    padding: 0 8px;
-    color: @text;
-    background-color: @base;
-    border-radius: 0px;
-    margin: 5px 0 5px 5px;
+  padding: 0 8px;
+  color: @text;
+  background-color: @base;
+  border-radius: 0px;
+  margin: 5px 0 5px 5px;
 }
 
 #workspaces button.selected {
-    background-color: @text;
+  background-color: @text;
 }
 
 #workspaces button.active {
-    color: @base;
-    background-color: @text;
-    padding: 0 20px;
-    margin: 6px;
+  color: @base;
+  background-color: @text;
+  padding: 0 20px;
+  margin: 6px;
 }
 
 #workspaces button.urgent {
-    background-color: @red;
-    color: @crust;
+  background-color: @red;
+  color: @crust;
 }
 
 #clock,
@@ -104,30 +105,33 @@ button {
 #idle_inhibitor,
 #scratchpad,
 #mpd {
-    padding: 0 10px;
-    background-color: @base;
-    color: @crust;
-    border-radius: 15px;
-    margin: 5px 0;
+  padding: 0 10px;
+  background-color: @base;
+  color: @crust;
+  border-radius: 15px;
+  margin: 5px 0;
 }
 
 #workspaces {
-    margin: 0 4px;
+  margin: 0 4px;
 }
 
 .modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 label:focus {
-    background-color: @base;
+  background-color: @base;
 }
 
-#clock, #network, #bluetooth, #window {
+#clock,
+#network,
+#bluetooth,
+#window {
   color: @text;
 }
 
@@ -136,10 +140,11 @@ label:focus {
 }
 
 #disk {
-    color: @text;
+  color: @text;
 }
 
-#pulseaudio, #pulseaudio.microphone {
+#pulseaudio,
+#pulseaudio.microphone {
   color: @text;
 }
 
@@ -156,12 +161,24 @@ label:focus {
 }
 
 #battery {
-    color: @text;
+  color: @text;
+}
+
+@keyframes blink {
+    to {
+        background-color: #000000;
+        color: #000000;
+    }
 }
 
 #battery.warning:not(.charging) {
-    background-color: @red;
-    color: @crust;
+  background-color: @red;
+  color: @crust;
+  animation-name: blink;
+  animation-duration: 1.0s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 #memory.warning {
@@ -173,23 +190,26 @@ label:focus {
   color: @text;
 }
 
-#cpu, #memory, #custom-notification, #backlight, #custom-light_dark {
+#cpu,
+#memory,
+#custom-notification,
+#backlight,
+#custom-light_dark {
   color: @text;
 }
 
 #keyboard-state > label {
-    padding: 0 5px;
+  padding: 0 5px;
 }
 
 #keyboard-state > label.locked {
-    background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 #scratchpad {
-    background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 #scratchpad.empty {
-	background-color: transparent;
+  background-color: transparent;
 }
-
