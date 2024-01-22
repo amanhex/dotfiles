@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Check which waybar theme is set
-THEMEIS=$(readlink -f ~/.config/waybar/style.css | cut -d '-' -f2)
+THEMEIS=$(readlink -f $HOME/.config/waybar/style.css | cut -d '-' -f2)
 
 #if the theme is not dark then we need to switch to it
 if [ $THEMEIS != "dark.css" ]; then
@@ -22,7 +22,7 @@ ln -sf ~/.config/waybar/style/style$SWITCHTO.css ~/.config/waybar/style.css
 ln -sf ~/.config/wofi/style/style$SWITCHTO.css ~/.config/wofi/style.css
 
 #set the swaync theme
-ln -sf ~/.config/swaync/style/style$SWITCHTO.css ~/.config/swaync/style.css
+ln -sf $HOME/.config/swaync/style/style$SWITCHTO.css $HOME/.config/swaync/style.css
 swaync-client -rs
 
 #set the xfce theme
@@ -35,7 +35,7 @@ gsettings set org.gnome.desktop.interface icon-theme "Qogir$SWITCHTO"
 
 #change the background image and be cool about it ;)
 swww img ~/.config/hypr/backgrounds/$wallpaper --transition-fps 60 --transition-type wipe --transition-duration 2
-~/.local/bin/pywal
+$HOME/.local/bin/pywal
 
 #update the sddm image
 # ln -sf /usr/share/sddm/themes/sdt/Backgrounds/wallpaper$SWITCHTO.jpg /usr/share/sddm/themes/sdt/wallpaper.jpg

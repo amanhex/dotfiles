@@ -52,33 +52,20 @@ button {
   border-radius: 0;
 }
 
-#workspaces button:hover {
-  background: @surface0;
-  border: @surface0;
-}
-
 #workspaces button {
-  padding: 0 8px;
-  color: @text;
-  background-color: @base;
-  border-radius: 0px;
-  margin: 5px 0 5px 5px;
+  padding: 0 5px;
+  color: #d4d4d6;
+  background: none;
 }
 
-#workspaces button.selected {
-  background-color: @text;
+#workspaces button:hover {
+  color: #f97583;
 }
 
+/* Fix: active workspace doesn't show up */
+/* #workspaces button.focused { */
 #workspaces button.active {
-  color: @base;
-  background-color: @text;
-  padding: 0 20px;
-  margin: 6px;
-}
-
-#workspaces button.urgent {
-  background-color: @red;
-  color: @crust;
+  color: #f97583;
 }
 
 #clock,
@@ -105,7 +92,7 @@ button {
 #idle_inhibitor,
 #scratchpad,
 #mpd {
-  padding: 0 10px;
+  padding: 0 8px;
   background-color: @base;
   color: @crust;
   border-radius: 15px;
@@ -146,6 +133,7 @@ label:focus {
 #pulseaudio,
 #pulseaudio.microphone {
   color: @text;
+  padding: 3px;
 }
 
 #pulseaudio.muted {
@@ -162,6 +150,7 @@ label:focus {
 
 #battery {
   color: @text;
+  padding: 0 6px;
 }
 
 @keyframes blink {
@@ -188,6 +177,7 @@ label:focus {
 
 #custom-power {
   color: @text;
+  margin-right: 4px;
 }
 
 #cpu,
@@ -196,6 +186,10 @@ label:focus {
 #backlight,
 #custom-light_dark {
   color: @text;
+}
+
+#custom-logo {
+  color: #1793d1;
 }
 
 #keyboard-state > label {
