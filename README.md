@@ -25,5 +25,4 @@ Install pywal for terminal theming
 
 - Check out the youtube video: [Link](https://youtu.be/t6KG91n9MXY)
 
-![image1](https://github.com/amanhex/dotfiles/blob/hyprland/img-vids/image.png?raw=true)
-![image2](https://raw.githubusercontent.com/amanhex/dotfiles/hyprland/img-vids/image-2.png)
+![image1](https://raw.githubusercontent.com/amanhex/dotfiles/hyprland/img/image-1.png)
