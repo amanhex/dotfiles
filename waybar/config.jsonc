@@ -75,7 +75,7 @@
 
   "custom/logo": {
     "format": "  ",
-    "on-click": "foot -T fetch -e -H neofetch & ~/.local/bin/pywal",
+    "on-click": "foot -T fetch -H neofetch",
     "tooltip": false
   },
 
