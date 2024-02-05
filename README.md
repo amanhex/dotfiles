@@ -10,7 +10,7 @@ First install hyprland using SolDoesTech's [HyprV2](https://github.com/SolDoesTe
 ## Stuffs Used
 
 - Tiling Window Manager : [Hyprland](https://hyprland.org/)
-- Bar : [Waybar](https://github.com/Alexays/Waybar)
+- Bar : [Waybar](https://github.com/Alexays/Waybar) (Install [Noto JP Serif](https://github.com/notofonts/noto-cjk/releases/download/Serif2.002/12_NotoSerifJP.zip) and JetBrainsMono Nerd Font for fonts in waybar)
 - Image Viewer: [imv](https://github.com/eXeC64/imv)
 - Terminal : [Foot](https://codeberg.org/dnkl/foot) (Install libsixel for image viewing in terminal (works only for Foot terminal))
 - Text Editor : [Neovim](https://neovim.io/) (Also install [NvChad](https://nvchad.com/) for conf to work)
