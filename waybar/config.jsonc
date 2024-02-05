@@ -10,8 +10,7 @@
   // Choose the order of the modules
   "modules-left": [
     "custom/logo",
-    "clock",
-    "memory",
+    "group/hardware",
     "hyprland/workspaces",
     "hyprland/window"
   ],
@@ -23,16 +22,9 @@
   "modules-right": [
     "network",
     "custom/updates",
-    // "disk",
-    // "backlight",
-    "pulseaudio",
-    // "pulseaudio#microphone",
-    // "tray",
-    "bluetooth",
     "battery",
-    "custom/notification",
-    "custom/light_dark",
-    "custom/power"
+    "clock",
+    "group/trayer"
   ],
 
   "hyprland/workspaces": {
@@ -44,8 +36,6 @@
       "1": "",
       "2": "",
       "3": "",
-      // "4": "",
-      // "5": "",
       "urgent": "",
       "active": "",
       "default": ""
@@ -67,8 +57,37 @@
     }
   },
 
+  "group/trayer": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "not-power",
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/notification",
+      "pulseaudio",
+      "bluetooth",
+      "custom/light_dark"
+    ]
+  },
+
+  "group/hardware": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "not-power",
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "memory",
+      "cpu",
+      "disk"
+    ]
+  },
+
   "custom/light_dark": {
-    "format": "󰐾",
+    "format": "󰠠",
     "on-click": "$HOME/.config/waybar/scripts/baraction light",
     "tooltip": false
   },

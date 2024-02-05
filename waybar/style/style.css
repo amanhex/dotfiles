@@ -110,12 +110,9 @@ button {
 #bluetooth,
 #mode,
 #cpu,
-#memory,
 #window,
 #custom-notification,
 #custom-light_dark,
-#idle_inhibitor,
-#scratchpad,
 #mpd {
     padding: 0 8px;
     background-color: @base;
@@ -208,20 +205,14 @@ label:focus {
   color: #1793d1;
 }
 
-#keyboard-state > label {
-    padding: 0 5px;
+#custom-light_dark {
+    margin-right: 4px;
+    padding: 4px;
 }
 
-#keyboard-state > label.locked {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-#scratchpad {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-#scratchpad.empty {
-	background-color: transparent;
+#custom-notification {
+    margin-right: 8px;
+    padding-left: 4px;
 }
 
 /* vim: ft=sass

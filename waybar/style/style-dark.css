@@ -85,12 +85,9 @@ button {
 #tray,
 #mode,
 #cpu,
-#memory,
 #window,
 #custom-notification,
 #custom-light_dark,
-#idle_inhibitor,
-#scratchpad,
 #mpd {
   padding: 0 8px;
   background-color: @base;
@@ -186,6 +183,16 @@ label:focus {
 #backlight,
 #custom-light_dark {
   color: @text;
+}
+
+#custom-light_dark {
+    margin-right: 4px;
+    padding: 4px;
+}
+
+#custom-notification {
+    margin-right: 8px;
+    padding-left: 4px;
 }
 
 #custom-logo {
