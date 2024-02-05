@@ -17,7 +17,7 @@
 @define-color red       #C21807;
 
 * {
-  font-family: JetBrainsMono Nerd Font;
+  font-family: 'JetBrainsMono Nerd Font', 'Noto Serif JP Bold';
   font-size: 13px;
 }
 
@@ -56,6 +56,7 @@ button {
   padding: 0 5px;
   color: #d4d4d6;
   background: none;
+  font-weight: bolder;
 }
 
 #workspaces button:hover {
